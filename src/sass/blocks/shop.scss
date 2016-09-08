@@ -1,0 +1,44 @@
+.shop {
+  background: url('../images/shop-bg.jpg');
+  padding: 50px 0 85px;
+  position: relative;
+  
+  img {
+    position: absolute;
+    bottom: -20%;
+    right: 58%;
+    height: 127%;
+    @media(max-width: 753px) {
+      display: none;
+    }
+  }
+  
+  .content-shop {
+    @include span(7 of 12);
+    @include last;
+    
+    @media(max-width: 851px) {
+      @include span(8 of 12);
+      @include last;
+    }
+    @media(max-width: 752px) {
+      @include span(12 of 12);
+    }
+    
+    &__title {
+      color: white;
+    }
+    &__desc {
+      color: #becee7;
+      font-size: 18px;
+      margin: 35px 0;
+      @media(max-width: 910px) {
+        margin: 20px 0;
+      }
+    }
+    &__btn {
+      @extend .content__btn;
+      background-color: #0081c3;
+    }
+  }
+}

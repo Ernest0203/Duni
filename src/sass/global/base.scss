@@ -1,0 +1,32 @@
+body {
+  font-family: $font-regular;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.center-wrapper {
+  @include container(940px);
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+h3 {
+  font-family: $font-headings;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

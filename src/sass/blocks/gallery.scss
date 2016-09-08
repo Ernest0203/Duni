@@ -1,0 +1,50 @@
+.gallery {
+  background: url('../images/gallery-bg.png');
+  background-color: #fda523;
+  padding: 60px 0 100px;
+  position: relative;
+  
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 62%;
+    height: 110%;
+    @media(max-width: 735px) {
+      display: none;
+    }
+  }
+    
+  .content-gallery {
+    position: relative;
+    z-index: 5;
+    @include span(8 of 12);
+    
+    @media(max-width: 900px) {
+      @include span(9 of 12);
+    }
+    @media(max-width: 800px) {
+      @include span(10 of 12);
+    }
+    @media(max-width: 730px) {
+      @include span(12 of 12);
+    }
+    
+    &__title {
+      color: #2e2e2e;
+    }
+    &__desc {
+      color: #2d2d2d;
+      font-size: 18px;
+      margin: 35px 0;
+      width: 83%;
+      @media(max-width: 730px) {
+        margin: 20px 0;
+        width: 100%;
+      }
+    }
+    &__btn {
+      @extend .content__btn;
+      background-color: #ff8400;
+    }
+  }
+}

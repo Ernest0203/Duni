@@ -1,0 +1,99 @@
+.duni {
+  background: url('../images/duni-bg-pic.png') no-repeat;
+  background-color: #f4f3f1;
+  background-position: 80% 70%;
+  padding: 60px 0 45px;
+  @media(max-width: 750px) {
+      background-image: none;
+    }
+  .content-duni {
+    @include span(6 of 12);
+    @media(max-width: 750px) {
+      @include span(12 of 12);
+      margin-bottom: 40px;
+    }
+    &__title {
+      color: #1c1c1c;
+    }
+    &__desc {
+      color: #707070;
+      font-family: 'Georgia';
+      line-height: 25px;
+      margin: 35px 0;
+      width: 80%;
+      @media(max-width: 750px) {
+        width: 100%;
+      }
+    }
+    &__link {
+      color: #ed1b2e;
+      font-family: 'Georgia';
+      position: relative;
+      &:after {
+        content: '>';
+        color: #ed1b2e;
+        position: absolute;
+        top: 0;
+        right: -20px;
+      }
+    }
+  }
+  .market-leader {
+    @include span(6 of 12);
+    @include last;
+    @media(max-width: 750px) {
+      @include span(12 of 12);
+    }
+    &__list {
+      margin: 0;
+    }
+    &__item {
+      @include span(2 of 6);
+      vertical-align: top;
+      @media(max-width: 360px) {
+        @include span(6 of 6);
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      &:last-child {
+        @include last;
+      }
+      p {
+        background-color: #1c1c1c;
+        border-radius: 50%;
+        color: white;
+        font-size: 25px;
+        font-family: $font-boldCond;
+        line-height: 81px;
+        height: 81px;
+        width: 81px;
+        text-align: center;
+        @media(max-width: 360px) {
+          margin: 0 auto 15px;
+        }
+      }
+      span {
+        color: #1c1c1c;
+        font-size: 18px;
+        font-family: $font-boldCond;
+        text-transform: uppercase;
+      }
+    }
+    
+    &__desc {
+      @include span(3 of 6);
+      @include last;
+      color: #ed1b2e;
+      font-size: 18px;
+      font-family: $font-boldCond;
+      margin-top: 170px;
+      text-transform: uppercase;
+      
+      @media(max-width: 750px) {
+        @include span(6 of 6);
+        margin-top: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

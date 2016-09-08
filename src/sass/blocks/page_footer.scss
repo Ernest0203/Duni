@@ -1,0 +1,112 @@
+.footer {
+  background-color: #fff;
+  padding: 60px 0 80px;
+  h5 {
+    color: #585858;
+    font-size: 15px;
+    font-family: $font-boldCond;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  span {
+    color: #8e8e8e;
+  }
+  .business {
+    @include span(3 of 12);
+    &__link {
+      color: #1c1c1c;
+      display: block;
+      margin-bottom: 15px;
+    }
+    @media(max-width: 751px) {
+      @include span(7 of 12);
+    }
+    @media(max-width: 430px) {
+      @include span(12 of 12);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+  .contact-us {
+    @include span(4.5 of 12);
+    @media(max-width: 751px) {
+      @include span(5 of 12);
+      @include last;
+    }
+    @media(max-width: 430px) {
+      @include span(12 of 12);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    &__email {
+      color: #1c1c1c;
+    }
+  }
+  .subscribe {
+    @include span(4.5 of 12);
+    @include last;
+    
+    @media(max-width: 751px) {
+      @include span(12 of 12);
+      text-align: center;
+    }
+    h5 {
+      margin-bottom: 20px;
+    }
+    &__form {
+      font-size: 0;
+      margin: 25px 0 45px;
+      input {
+        color: #909090;
+        border: 1px solid #909090;
+        font-size: 15px;
+        font-style: italic;
+        padding: 10px;
+        width: 71%;
+        
+        @media(max-width: 831px) {
+          width: 68%;
+        }
+        @media(max-width: 751px) {
+          width: 60%;
+        }
+      }
+      button {
+        color: white;
+        background-color: #1c1c1c;
+        border: none;
+        font-size: 15px;
+        font-family: $font-boldCond;
+        padding: 10.5px;
+        width: 21%;
+        text-align: center;
+        
+        @media(max-width: 751px) {
+          width: 20%;
+        }
+      }
+    }
+    .social {
+      &__link {
+        background: url('../images/sprite.png') no-repeat;
+        display: inline-block;
+        border-radius: 50%;
+        height: 42px;
+        width: 42px;
+        margin-right: 10px;
+        &:nth-child(1){
+          background-position: -42px -41px;
+        }
+        &:nth-child(2){
+          background-position: 0 -41px;
+        }
+        &:nth-child(3){
+          background-position: -42px 0;
+        }
+        &:nth-child(4){
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+}
